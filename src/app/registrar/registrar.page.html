@@ -1,57 +1,30 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>RegistrAPP</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">RegistrAPP</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Inserte datos</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <!-- Puedes agregar contenido específico de la primera página aquí -->
-      <!-- Por ejemplo, puedes agregar botones, etiquetas, o cualquier otro elemento -->
-
-      <form [formGroup]="formularioregistro">
-        <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
-          <ion-input formControlName="nombre"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Contraseña</ion-label>
-          <ion-input formControlName="contraseña" type="password"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Confirmar contraseña</ion-label>
-          <ion-input formControlName="confirmarcontraseña" type="password"></ion-input>
-        </ion-item>
-        <br>
-
-
-
-
-        <ion-button (click)="guardar()">
-          Registrarse
-        </ion-button>
-        <ion-button [routerLink]="['/login']">Volver</ion-button>
-
-
-      </form>
-
-    </ion-card-content>
-  </ion-card>
-
-</ion-content>
-<ion-footer>
-  <!-- Puedes agregar contenido adicional en el pie de página si es necesario -->
-</ion-footer>
+<ion-card class="login-card">
+  <ion-card-header class="login-header">
+    <ion-card-title>RegistrapAPP</ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="login-content">
+    <form [formGroup]="formularioregistro">
+      <ion-item class="login-input">
+        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-label position="floating">Nombre de Usuario</ion-label>
+        <ion-input formControlName="nombre"></ion-input>
+      </ion-item>
+      <ion-item class="login-input">
+        <ion-icon name="lock-closed" slot="start"></ion-icon>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input formControlName="contraseña" type="password"></ion-input>
+      </ion-item>
+      <ion-item class="login-input">
+        <ion-icon name="lock-closed" slot="start"></ion-icon>
+        <ion-label position="floating">Confirmar contraseña</ion-label>
+        <ion-input formControlName="confirmarcontraseña" type="password"></ion-input>
+      </ion-item>
+      <ion-button expand="full" class="login-button" (click)="guardar()">
+        Registrarse
+      </ion-button>
+      <div class="button-container">
+        <a [routerLink]="['/login']" class="login-link">Volver</a>
+      </div>
+    </form>
+  </ion-card-content>
+</ion-card>

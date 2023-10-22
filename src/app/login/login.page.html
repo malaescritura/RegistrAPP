@@ -1,40 +1,41 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-    <ion-title>RegistrAPP</ion-title>
+    <ion-title class="login-title">RegistrAPP</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="login-content">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">RegistrapAPP</ion-title>
+      <ion-title size="large" class="login-title">RegistrapAPP</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Acceder</ion-card-title>
+  <ion-card class="ion-text-center login-card">
+    <ion-card-header class="login-header">
+      <ion-card-title class="login-title">Acceder</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <form [formGroup]="formulariologin">
-        <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
+        <ion-item class="login-input">
+          <ion-icon name="person" slot="start"></ion-icon>
+          <ion-label position="floating">Nombre de Usuario</ion-label>
           <ion-input formControlName="nombre"></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item class="login-input">
+          <ion-icon name="lock-closed" slot="start"></ion-icon>
           <ion-label position="floating">Contraseña</ion-label>
           <ion-input formControlName="contraseña" type="password"></ion-input>
         </ion-item>
       </form>
+      <ion-button expand="full" color="primary" class="login-button" (click)="ingresar()">Ingresar</ion-button>
       <!-- Utiliza una lista no ordenada (<ul>) para los enlaces y aplica estilos CSS para ocultar los puntos -->
       <ul class="vertical-links">
-        <ion-button (click)="ingresar()">Ingresar</ion-button>
         <li><a [routerLink]="['/registrar']">Registrarse</a></li>
         <li><a [routerLink]="['/forgot-password']">Recuperar contraseña</a></li>
       </ul>
     </ion-card-content>
   </ion-card>
-
 </ion-content>
 <ion-footer>
   <!-- Puedes agregar contenido adicional en el pie de página si es necesario -->

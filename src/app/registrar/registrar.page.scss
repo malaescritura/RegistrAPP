@@ -1,0 +1,22 @@
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Esto centrará horizontalmente todos los elementos hijos */
+    justify-content: center; /* Esto centrará verticalmente todos los elementos hijos */
+    
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px; /* Agrega un margen superior para separar los elementos */
+  }
+  
+  .login-link {
+    text-decoration: underline;
+    color: #007BFF;
+    cursor: pointer;
+  }
+
+  
