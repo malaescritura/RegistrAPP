@@ -1,0 +1,31 @@
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Esto centrará horizontalmente todos los elementos hijos */
+    justify-content: center; /* Esto centrará verticalmente todos los elementos hijos */
+    
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px; /* Agrega un margen superior para separar los elementos */
+  }
+  
+  .login-link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los elementos hijos */
+  }
+
+  .login-title {
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+  
+  .login-card {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }

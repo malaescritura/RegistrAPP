@@ -1,12 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Bloqueo de Ruta</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="login-title">RegistrAPP</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <h2>Acceso denegado</h2>
-  <p>No tienes permiso para acceder a esta página. Por favor, inicia sesión o contacta al administrador.</p>
+<ion-content [fullscreen]="true" class="login-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="login-title">RegistrapAPP</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-  <ion-button (click)="redirigirALogin()">Ir a la página de inicio de sesión</ion-button>
+  <ion-card class="login-card">
+    <ion-card-header class="login-header">
+      <ion-card-title>Acceso Denegado</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="login-content">
+      <p>No tienes permiso para acceder a esta página. Por favor, inicia sesión o contacta al administrador.</p>
+      <a [routerLink]="['/login']" class="login-link">
+        Ir a la página de inicio de sesión
+      </a>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
